@@ -8,10 +8,10 @@ class Word {
 		}
 		this.letters = letters;
 	}
-	getWord() {
+	toString() {
 		let word = '';
 		for (const letter of this.letters) {
-			word = word + letter.getLetter();
+			word = word + letter + ' ';
 		}
 		return word;
 	}
@@ -19,6 +19,15 @@ class Word {
 		for (const letter of this.letters) {
 			letter.check(guess);
 		}
+	}
+	isSolved() {
+		for (const letter of this.letters) {
+			if (letter.guessed) {
+				continue;
+			}
+			return false;
+		}
+		return true;
 	}
 }
 
