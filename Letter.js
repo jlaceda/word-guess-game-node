@@ -1,7 +1,8 @@
 class Letter {
 	constructor(letter) {
 		this.letter = letter.toUpperCase();
-		this.guessed = this.letter === ' ';
+		const weirdChars = `'"?,./\\ -_`
+		this.guessed = weirdChars.indexOf(this.letter) !== -1;
 	}
 	getLetter() {
 		if (this.guessed) {
