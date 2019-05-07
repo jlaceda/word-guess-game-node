@@ -4,7 +4,7 @@ class Letter {
 		const weirdChars = `'"?,./\\ -_`
 		this.guessed = weirdChars.indexOf(this.letter) !== -1;
 	}
-	getLetter() {
+	toString() {
 		if (this.guessed) {
 			return this.letter;
 		}
