@@ -1,8 +1,8 @@
 class Letter {
 	constructor(letter) {
 		this.letter = letter.toUpperCase();
-		const weirdChars = `'"?,./\\ -_`
-		this.guessed = weirdChars.indexOf(this.letter) !== -1;
+		const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		this.guessed = alphabet.indexOf(this.letter) === -1;
 	}
 	toString() {
 		if (this.guessed) {
