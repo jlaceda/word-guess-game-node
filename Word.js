@@ -2,9 +2,9 @@ const Letter = require('./Letter');
 
 class Word {
 	constructor(word) {
-		this.letters = [];
+		let letters = [];
 		for (const letter of word) {
-			this.letters.push(new Letter(letter));
+			letters.push(new Letter(letter));
 		}
 		this.letters = letters;
 	}
