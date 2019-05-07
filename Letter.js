@@ -1,7 +1,7 @@
 class Letter {
 	constructor(letter) {
 		this.letter = letter.toUpperCase();
-		this.guessed = false;
+		this.guessed = this.letter === ' ';
 	}
 	getLetter() {
 		if (this.guessed) {
