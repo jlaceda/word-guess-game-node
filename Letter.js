@@ -13,7 +13,9 @@ class Letter {
 	check(guess) {
 		if (guess.toUpperCase() === this.letter) {
 			this.guessed = true;
+			return true;
 		}
+		return false;
 	}
 }
 

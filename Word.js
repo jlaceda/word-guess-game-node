@@ -16,9 +16,13 @@ class Word {
 		return word;
 	}
 	check(guess) {
+		let result = false;
 		for (const letter of this.letters) {
-			letter.check(guess);
+			if (letter.check(guess)) {
+				result = true;
+			}
 		}
+		return result;
 	}
 	isSolved() {
 		for (const letter of this.letters) {
